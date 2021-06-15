@@ -22,44 +22,8 @@ struct ContentView: View {
                 }
             }
             .foregroundColor(.red)
-            Spacer()
-            HStack {
-                remove
-                Spacer()
-                add
-            }
-            .font(.largeTitle)
-            .padding(.horizontal)
         }
         .padding(.horizontal)
-    }
-    
-    var remove: some View {
-        VStack {
-            Button {
-                if emojiCount > 1 {
-                    emojiCount -= 1
-                }
-            } label: {
-                VStack {
-                    Image(systemName: "minus.circle")
-                }
-            }
-        }
-    }
-    var add: some View {
-        VStack {
-            Button {
-                if emojiCount < emojis.count {
-                    emojiCount += 1
-                }
-
-            } label: {
-                VStack {
-                    Image(systemName: "plus.circle")
-                }
-            }
-        }
     }
 }
 
